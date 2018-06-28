@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS friends (
     users_id integer,
     friends_id integer,
-    friendDate datetime
+    friendDate timestamp default current_timestamp
 );
 
 -- table for posts
@@ -18,24 +18,26 @@ CREATE TABLE IF NOT EXISTS posts (
     postType TEXT,
     textContent TEXT,
     postLink TEXT,
-    postDate datetime
+    postDate timestamp default current_timestamp
 );
 
 -- table for likes
 CREATE TABLE IF NOT EXISTS likes (
     id SERIAL PRIMARY KEY,
-    likeDate datetime,
+    likeDate timestamp default current_timestamp,
     posts_id integer,
-    comments_id integer
+    comments_id integer,
+    users_id integer
 );
 
 -- table for comments
 CREATE TABLE IF NOT EXISTS comments (
     id SERIAL PRIMARY KEY,
-    commentDate datetime,
+    commentDate timestamp default current_timestamp,
     posts_id integer,
     comments_id integer,
-    textContent TEXT
+    textContent TEXT,
+    users_id integer
 );
 
 -- table for groups
@@ -47,7 +49,7 @@ CREATE TABLE IF NOT EXISTS groups (
 
 -- joining table for groupMembers
 CREATE TABLE IF NOT EXISTS groupMembers (
-    groups_id,
+    groups_id integer,
     memberId_users_id integer
 );
 
@@ -70,6 +72,6 @@ CREATE TABLE IF NOT EXISTS messages (
     groupChats_id integer,
     sender_id integer,
     textContent TEXT,
-    timeSent datetime
+    timeSent timestamp default current_timestamp
 );
 
