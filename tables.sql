@@ -6,9 +6,10 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 -- joining friends table between users
-CREATE TABLE IF NOT EXISTS friends (
-    users_id integer,
-    friends_id integer,
+CREATE TABLE IF NOT EXISTS users_users (
+    id SERIAL PRIMARY KEY,
+    user1_id integer,
+    user2_id integer,
     friendDate timestamp default current_timestamp
 );
 
@@ -48,7 +49,7 @@ CREATE TABLE IF NOT EXISTS groups (
 );
 
 -- joining table for groupMembers
-CREATE TABLE IF NOT EXISTS groupMembers (
+CREATE TABLE IF NOT EXISTS groups_users (
     groups_id integer,
     memberId_users_id integer
 );
@@ -61,7 +62,7 @@ CREATE TABLE IF NOT EXISTS groupChats (
 
 
 -- joining table for list of groupChats
-CREATE TABLE IF NOT EXISTS joinGroupChats (
+CREATE TABLE IF NOT EXISTS groupChats_users (
     groupChats_id integer,
     users_id integer
 );

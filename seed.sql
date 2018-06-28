@@ -10,9 +10,18 @@ INSERT INTO users (name, email) VALUES ('uabs', 'uabs@ga.com'); --8
 
 
 -- content for joining friends table between users
-INSERT INTO friends (users_i, friends_id) VALUES (1,2);
-INSERT INTO friends (users_i, friends_id) VALUES (1,3);
-INSERT INTO friends (users_i, friends_id) VALUES (1,4);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,2);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,3);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,4);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,5);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,6);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,7);
+INSERT INTO users_users (user1_id, user2_id) VALUES (1,8);
+INSERT INTO users_users (user1_id, user2_id) VALUES (2,3);
+INSERT INTO users_users (user1_id, user2_id) VALUES (2,4);
+INSERT INTO users_users (user1_id, user2_id) VALUES (2,5);
+INSERT INTO users_users (user1_id, user2_id) VALUES (2,6);
+INSERT INTO users_users (user1_id, user2_id) VALUES (2,7);
 
 -- content for table for posts
 INSERT INTO posts (postType, textContent, postLink) VALUES ('video', 'yay1', 'yay1.com'); --1
@@ -37,15 +46,15 @@ INSERT INTO groups (name, creatorId_users_id) VALUES ('newGroup2', 4); --2
 INSERT INTO groups (name, creatorId_users_id) VALUES ('newGroup3', 5); --3
 
 -- content for joining table for groupMembers
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (1, 1);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (1, 2);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (1, 6);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (2, 1);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (2, 2);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (2, 3);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (3, 1);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (3, 2);
-INSERT INTO groupMembers (groups_id, memberId_users_id) VALUES (3, 3);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (1, 1);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (1, 2);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (1, 6);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (2, 1);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (2, 2);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (2, 3);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (3, 1);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (3, 2);
+INSERT INTO groups_users (groups_id, memberId_users_id) VALUES (3, 3);
 
 -- content for table for list of groupChats
 INSERT INTO groupChats (name) VALUES ('created by 1, with ALL'); --1
@@ -55,34 +64,34 @@ INSERT INTO groupChats (name) VALUES ('created by 4, with 1-3'); --4
 INSERT INTO groupChats (name) VALUES ('created by 5, with 4-8'); --5
 
 -- content for joining table for list of groupChats
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 1);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 2);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 3);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 4);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 5);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 6);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 7);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (1, 8);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 2);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 3);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 4);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 5);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 6);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 7);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (2, 8);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (3, 3);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (3, 5);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (3, 6);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (3, 7);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (4, 4);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (4, 1);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (4, 2);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (4, 3);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (5, 5);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (5, 4);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (5, 6);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (5, 7);
-INSERT INTO joinGroupChats (groupChats_id, users_id) VALUES (5, 8);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 1);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 2);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 3);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 4);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 5);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 6);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 7);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (1, 8);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 2);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 3);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 4);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 5);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 6);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 7);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (2, 8);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (3, 3);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (3, 5);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (3, 6);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (3, 7);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (4, 4);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (4, 1);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (4, 2);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (4, 3);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (5, 5);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (5, 4);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (5, 6);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (5, 7);
+INSERT INTO groupChats_users (groupChats_id, users_id) VALUES (5, 8);
 
 -- content for table for list of messages
 INSERT INTO messages (groupChats_id, sender_id, textContent) VALUES (1, 1, 'hi i am 1');
