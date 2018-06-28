@@ -60,7 +60,6 @@ CREATE TABLE IF NOT EXISTS groupChats (
     name TEXT
 );
 
-
 -- joining table for list of groupChats
 CREATE TABLE IF NOT EXISTS groupChats_users (
     groupChats_id integer,

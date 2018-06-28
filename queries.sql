@@ -16,7 +16,7 @@ WHERE ((users_users.users1_id = 3 OR users_users.users2_id = 3) AND users.id != 
 SELECT 'memberId_users_id' FROM 'groups_users'
 WHERE 'group_id' = 1;
 
--- find all comments under a post
+-- find all comments under a post 
 -- BEGIN
 --     FOR 'comments'.'comments_id' IN (SELECT 'comments'.'comments_id' FROM 'comments' 
 --                 INNER JOIN 'posts' ON 'posts'.'id' = 'comments'.'posts_id'
